@@ -3,8 +3,11 @@ const router = express.Router();
 
 const EmployeeController =require('../controllers/EmployeeControllers');
 
-router.get('/', EmployeeController.index);
-router.get('/show', EmployeeController.show);
-router.post('/store', EmployeeController.store);
+router.get('/all', EmployeeController.index);
+router.get('/', EmployeeController.show);
+router.post('/', EmployeeController.store);
+router.put('/', EmployeeController.update);
+router.delete('/', EmployeeController.destroy);
+
 
 module.exports = router;
